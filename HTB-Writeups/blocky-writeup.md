@@ -1,7 +1,7 @@
 Lanzamos un nmap 
 
 
-!Pasted image 20250307182407.png
+![Resultado de Nmap](Pasted%20image%2020250307182407.png)
 
 Vamos a ver que hay por el puerto 80
 
