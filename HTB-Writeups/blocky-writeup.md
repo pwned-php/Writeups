@@ -1,7 +1,8 @@
 Lanzamos un nmap 
 
 
-![[prueba/Pasted image 20250307182407.png]]
+prueba/Pasted image 20250307182407.png
+
 Vamos a ver que hay por el puerto 80
 
 Encontramos un panel de login
