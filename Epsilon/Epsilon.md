@@ -1,4 +1,3 @@
-markdown
 # Writeup - Máquina Epsilon HTB
 
 **Autor**: [Tu Nombre]  
