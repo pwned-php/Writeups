@@ -14,7 +14,7 @@ Lanzamos un nmap para descubrir puertos abiertos:
 
 ```bash
 nmap -p- --open -sT --min-rate 5000 -vvv -n -Pn 10.10.11.134
-https://images/nmap_scan.png
+Nmap.png
 
 Puertos abiertos:
 
