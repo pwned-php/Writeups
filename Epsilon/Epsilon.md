@@ -28,12 +28,13 @@ Git Exposure - Puerto 80
 Al acceder a http://10.10.11.134 obtenemos 403 Forbidden, pero descubrimos que el directorio .git/ está expuesto.
 
 Descargar Repositorio .git
+Con la herramienta gitdumper dumpeamos el codigo .git
 ```
 git clone https://github.com/internetwache/GitTools.git
 cd GitTools/Dumper
 ./gitdumper.sh http://10.10.11.134/.git/ ../../git_dump
 ```
-https://./images/git_dumper.png
+![Resultado de Nmap](dumper.png)
 
 Analizar Historial de Commits
 
