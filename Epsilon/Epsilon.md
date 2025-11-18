@@ -36,6 +36,11 @@ cd GitTools/Dumper
 ```
 ![Herramienta](dumper.png)
 
+Nos genera varios archivos 
+vemos el codigo fuente de uno de ellos
+Y nos encontramos con varias cosas interesantes, vemos unas credenciales
+Una referencia a una secret key
+Un formato de algoritmo HS256 que ya sabemos que tanto como HS256, HS384 y HC512 son algoritmos simetricos 
 Analizar Historial de Commits
 
 ```
