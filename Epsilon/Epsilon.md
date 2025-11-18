@@ -34,7 +34,7 @@ git clone https://github.com/internetwache/GitTools.git
 cd GitTools/Dumper
 ./gitdumper.sh http://10.10.11.134/.git/ ../../git_dump
 ```
-![Resultado de Nmap](dumper.png)
+![Herramienta](dumper.png)
 
 Analizar Historial de Commits
 
