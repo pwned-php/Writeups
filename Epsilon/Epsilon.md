@@ -15,7 +15,7 @@ Lanzamos un nmap para descubrir puertos abiertos:
 ```bash
 nmap -p- --open -sT --min-rate 5000 -vvv -n -Pn 10.10.11.134
 
-https://./Nmap.png
+![Panel de Login de WordPress](Nmap.png)
 
 Puertos abiertos:
 
