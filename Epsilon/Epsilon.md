@@ -44,7 +44,9 @@ Un formato de algoritmo HS256 que ya sabemos que tanto como HS256, HS384 y HC512
 Analizar Historial de Commits
 
 Vemos que tenemos un archivo server.py
+
 ![Resultado](server.png)
+
 Donde en la line 59 encontramos un posible SSTI 
 
 ```
