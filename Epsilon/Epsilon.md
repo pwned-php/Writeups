@@ -8,7 +8,7 @@ markdown
 
 ---
 
-## 🔍 Reconocimiento
+##  Reconocimiento
 
 Lanzamos un nmap para descubrir puertos abiertos:
 
@@ -24,7 +24,7 @@ Puertos abiertos:
 
 5000/tcp - HTTP (Flask/Werkzeug)
 
-📁 Git Exposure - Puerto 80
+ Git Exposure - Puerto 80
 Al acceder a http://10.10.11.134 obtenemos 403 Forbidden, pero descubrimos que el directorio .git/ está expuesto.
 
 Descargar Repositorio .git
@@ -71,7 +71,7 @@ python
 secret = '<secret_key>'
 https://images/server_code.png
 
-☁️ Enumeración AWS Lambda
+ Enumeración AWS Lambda
 Configurar AWS CLI
 bash
 aws configure
@@ -101,7 +101,7 @@ python
 secret='RrXCv`mrNe!K!4+5`wYq'
 https://images/lambda_secret.png
 
-🎫 Bypass de Autenticación JWT
+ Bypass de Autenticación JWT
 Generar Token JWT
 python
 import jwt
@@ -124,7 +124,7 @@ Luego navegar a: http://epsilon.htb:5000/home
 
 https://images/admin_access.png
 
-💥 Explotación SSTI
+ Explotación SSTI
 Verificar Vulnerabilidad
 bash
 curl -X POST http://10.10.11.134:5000/order \
@@ -153,7 +153,7 @@ python3 -c 'import pty; pty.spawn("/bin/bash")'
 # Ctrl+Z
 stty raw -echo; fg
 export TERM=xterm
-⬆️ Escalada de Privilegios
+ Escalada de Privilegios
 User Flag
 bash
 find / -name "user.txt" 2>/dev/null
@@ -228,7 +228,7 @@ Root Flag: f1c9b81c1242d7cdb758442165ee609d
 
 https://images/root_flag.png
 
-🏆 Conclusión
+ Conclusión
 Vulnerabilidades Explotadas
 Git Repository Exposure - .git/ accesible públicamente
 
@@ -241,15 +241,15 @@ Server-Side Template Injection - En endpoint /order
 Insecure Cron Job - Parámetro -h en tar que sigue symlinks
 
 Lecciones de Seguridad
-❌ Nunca exponer directorios .git/ en producción
+ Nunca exponer directorios .git/ en producción
 
-❌ Usar git-secrets para prevenir commit de credenciales
+ Usar git-secrets para prevenir commit de credenciales
 
-❌ Rotar credenciales AWS regularmente
+ Rotar credenciales AWS regularmente
 
-❌ Sanitizar inputs en render_template_string()
+ Sanitizar inputs en render_template_string()
 
-❌ Validar parámetros en scripts de cron (evitar tar -h)
+ Validar parámetros en scripts de cron (evitar tar -h)
 
 Técnicas Utilizadas
 Git Dumping
@@ -264,4 +264,4 @@ Symlink Exploitation
 
 Cron Job Abuse
 
-¡Máquina comprometida exitosamente! 🎯
+¡Máquina comprometida exitosamente! 
