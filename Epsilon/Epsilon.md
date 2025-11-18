@@ -43,6 +43,10 @@ Una referencia a una secret key
 Un formato de algoritmo HS256 que ya sabemos que tanto como HS256, HS384 y HC512 son algoritmos simetricos 
 Analizar Historial de Commits
 
+Vemos que tenemos un archivo server.py
+![Resultado](server.png)
+Donde en la line 59 encontramos un posible SSTI 
+
 ```
 cd git_dump
 git log --oneline
