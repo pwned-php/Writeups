@@ -47,7 +47,8 @@ Analizar Historial de Commits
 cd git_dump
 git log --oneline
 ```
-https://./images/git_log.png
+
+
 
 Output:
 ```
@@ -68,7 +69,7 @@ session = Session(
     region_name='us-east-1',
     endpoint_url='http://cloud.epsilong.htb')
 ```
-https://./images/aws_credentials.png
+![Resultado](server.png)
 
 Analizar server.py
 Encontramos una vulnerabilidad SSTI en la línea 59:
