@@ -255,9 +255,9 @@ check_file=`date +%N`
 ```
 Lo que hace este script es:
 
-1. Crea un backup** de `/var/www/app/` en `/opt/backups/`
+1. Crea un backup de `/var/www/app/` en `/opt/backups/`
 
-2. Genera un checksum SHA1** del backup y lo guarda en `/opt/backups/checksum`
+2. Genera un checksum SHA1 del backup y lo guarda en `/opt/backups/checksum`
 
 3. Espera 5 segundos
 
