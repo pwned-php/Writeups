@@ -48,6 +48,8 @@ Vemos que tenemos un archivo server.py
 
 Donde en la line 59 encontramos un posible SSTI 
 
+![59](59.png)
+
 ```
 cd git_dump
 git log --oneline
