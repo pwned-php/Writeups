@@ -50,8 +50,9 @@ Donde en la line 59 encontramos un posible SSTI
 
 ![59](59.png)
 
+Vamos ahora a ejecutar el siguiente comando para mostrar el historial de commits de forma resumida
+
 ```
-cd git_dump
 git log --oneline
 ```
 
