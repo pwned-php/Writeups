@@ -65,7 +65,12 @@ b10dd06 Adding Costume Site
 c514416 Updating Tracking API
 7cf92a7 Adding Tracking API Module
 ```
-Encontrar Credenciales AWS
+Encontrar Credenciales AWS.
+
+Este comando lo que hace es mostrar toda la información de un commit específico.
+
+Vemos que se menciona aws lambda
+
 ```
 git show 7cf92a7
 ```
