@@ -48,6 +48,14 @@ Vemos que tenemos un archivo server.py
 
 Donde en la line 59 encontramos un posible SSTI 
 
+```
+tmpl=render_template_string(message,costume=costume)
+```
+Y autenticación JWT con secret_key ofuscada:
+```
+secret = '<secret_key>'
+```
+
 ![59](59.png)
 
 Vamos ahora a ejecutar el siguiente comando para mostrar el historial de commits de forma resumida
@@ -90,25 +98,15 @@ Vamos ahora a enumerar AWS LAMBDA
 
 Ingresamos las key que hemos encontrado
 
-![aws](aws.png)
-
-Analizar server.py
-
-Encontramos una vulnerabilidad SSTI en la línea 59:
-```
-tmpl=render_template_string(message,costume=costume)
-```
-Y autenticación JWT con secret_key ofuscada:
-```
-secret = '<secret_key>'
-```
-https://./images/server_code.png
-
 Enumeración AWS Lambda
+
 Configurar AWS CLI
 ```
 aws configure
 ```
+
+![aws](aws.png)
+
 Credenciales:
 
 AWS Access Key: AQLA5M37BDN6FJP76TDC
@@ -121,7 +119,7 @@ Enumerar Funciones Lambda
 ```
 aws lambda list-functions --endpoint-url http://cloud.epsilon.htb
 ```
-https://./images/lambda_functions.png
+![funcion](funcion.png)
 
 Encontramos: costume_shop_v1
 
