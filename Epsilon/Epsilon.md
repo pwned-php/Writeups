@@ -133,7 +133,7 @@ En lambda_function.py encontramos la secret_key real:
 ```
 secret='RrXCv`mrNe!K!4+5`wYq'
 ```
-https://./images/lambda_secret.png
+![zip](zip.png)
 
 Bypass de Autenticación JWT
 Generar Token JWT
