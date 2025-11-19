@@ -204,24 +204,42 @@ curl -X POST http://10.10.11.134:5000/order \
 
 ![SSTI](rshell.png)
 
-Estabilizar Shell Con tratamiento de la TTY
+Hemos conseguido pasar de un SSTI a un RCE
+
+Tras la intrusion lo primero que hacemos es el tratamiento de la TTY 
 
 Escalada de Privilegios
-User Flag
+User Flag:
+
+Encontramos la flag de user en el direcotrio personal de tom
+
 ```
 find / -name "user.txt" 2>/dev/null
 cat /home/ubuntu/user.txt
 ```
 User Flag: e7b7a5a76e7c6a45b36a6f935d5cbd8a
 
-https://./images/user_flag.png
-
 Descubrir Cron Job Vulnerable
+
+Nos movemos al directorio /tmp que suele tener permisos de escritura para usuarios no privilegiados
+
 Usamos pspy para enumerar procesos:
+
 ```
 ./pspy64
 ```
-https://./images/pspy.png
+![pspy](pspy.png)
+
+Le damos permisos de ejecucion y lo ejecutamos
+
+```
+chmod +x
+./pspy64
+```
+
+Vemos que root ejecuta un script, sabemos que lo hace root por que el UID es 0
+
+![pspy](cron.png)
 
 Encontramos un script de backup ejecutándose como root:
 ```
