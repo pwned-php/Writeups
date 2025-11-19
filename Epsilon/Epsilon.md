@@ -166,9 +166,9 @@ document.cookie = 'auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImF
 ```
 ![nevegador](cookie.png)
 
-Luego navegar a: http://epsilon.htb:5000/home
+Luego navegamos a: http://epsilon.htb:5000/home y vemos que ya somos admin
 
-https://./images/admin_access.png
+![nevegador](admin.png)
 
 Explotación SSTI
 Verificar Vulnerabilidad
