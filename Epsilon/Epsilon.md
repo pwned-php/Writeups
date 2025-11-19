@@ -164,11 +164,11 @@ En el navegador, abrir consola (F12) y ejecutar:
 ```
 document.cookie = 'auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4'
 ```
-![nevegador](cookie.png)
+![navegador](cookie.png)
 
 Luego navegamos a: http://epsilon.htb:5000/home y vemos que ya somos admin
 
-![nevegador](admin.png)
+![navegador](admin.png)
 
 Explotación SSTI
 Verificar Vulnerabilidad
