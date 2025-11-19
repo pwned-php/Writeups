@@ -84,9 +84,16 @@ session = Session(
     region_name='us-east-1',
     endpoint_url='http://cloud.epsilong.htb')
 ```
-![Resultado](server.png)
+Estas son CREDENCIALES DE AWS (Amazon Web Services) que te permiten acceder a servicios cloud.
+
+Vamos ahora a enumerar AWS LAMBDA
+
+Ingresamos las key que hemos encontrado
+
+![aws](aws.png)
 
 Analizar server.py
+
 Encontramos una vulnerabilidad SSTI en la línea 59:
 ```
 tmpl=render_template_string(message,costume=costume)
