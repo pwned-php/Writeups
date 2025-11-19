@@ -74,6 +74,8 @@ Vemos que se menciona aws lambda
 ```
 git show 7cf92a7
 ```
+![lambda](lambda.png)
+
 En el archivo track_api_CR_148.py encontramos:
 ```
 session = Session(
