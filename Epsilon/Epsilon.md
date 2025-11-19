@@ -125,10 +125,10 @@ Encontramos: costume_shop_v1
 
 Descargar Código de la Función
 ```
-aws lambda get-function --function-name costume_shop_v1 --endpoint-url http://cloud.epsilon.htb
 wget "http://cloud.epsilon.htb/2015-03-31/functions/costume_shop_v1/code" -O lambda_code.zip
-unzip lambda_code.zip
 ```
+![funcion](funcion1.png)
+
 En lambda_function.py encontramos la secret_key real:
 ```
 secret='RrXCv`mrNe!K!4+5`wYq'
