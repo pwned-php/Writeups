@@ -1,6 +1,5 @@
 # Writeup - Máquina Epsilon HTB
 
-**Autor**: [Tu Nombre]  
 **Plataforma**: HackTheBox  
 **Dificultad**: Media  
 **Sistema**: Linux  
