@@ -1,4 +1,4 @@
-# Writeup - Máquina Jravis HTB
+# Writeup - Máquina Jarvis HTB
 
 **Plataforma**: HackTheBox  
 **Dificultad**: Media  
@@ -9,3 +9,6 @@
 ## Reconocimiento
 
 Lanzamos un nmap para descubrir puertos abiertos:
+```
+nmap -p- --open -sT --min-rate 5000 -vvv -n -Pn 10.10.10.143
+```
