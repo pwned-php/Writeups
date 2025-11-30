@@ -167,4 +167,8 @@ chmod +x reverseshell.sh
 
 ![Resultado de Nmap](IMG/script1.png)
 
+Y escalamos a pepper
+
+![Resultado de Nmap](IMG/pepper.png)
+
 
