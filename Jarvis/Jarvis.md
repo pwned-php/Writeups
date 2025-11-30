@@ -13,3 +13,9 @@ Lanzamos un nmap para descubrir puertos abiertos:
 nmap -p- --open -sT --min-rate 5000 -vvv -n -Pn 10.10.10.143
 ```
 ![Resultado de Nmap](IMG/nmap.png)
+
+Vemos que tenemos abierto el puerto 80 donde esta corriendo un servicio http
+
+Se le hechamos un vistazo a la url de una habitacion vemos que se añade un parametro
+
+![Resultado de Nmap](IMG/hotel.png)
