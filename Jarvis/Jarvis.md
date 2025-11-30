@@ -157,6 +157,14 @@ Si ejecutamos el comando sudo -l vemos que tenemos permisos para ejectar un scri
 
 ![Resultado de Nmap](IMG/script.png)
 
+Como nos escapa los - vamos a crearnos la reverse shell en el directorio /tmp
 
+```
+nano reverseshell.sh
+
+chmod +x reverseshell.sh
+```
+
+![Resultado de Nmap](IMG/script1.png)
 
 
