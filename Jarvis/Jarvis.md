@@ -173,6 +173,6 @@ Y escalamos a pepper
 
 En el directorio /tmp nos vamos a crear un archivo .service
 
-![Resultado de Nmap](IMG/sevirce.png)
+![Resultado de Nmap](IMG/servirce.png)
 
 
