@@ -36,3 +36,10 @@ Vemos que tiene 7 columnas
 Vemos que tenemos control sobre la columna 3 asi que probamos a imprimir por pantalla "test"
 
 ![Resultado de Nmap](IMG/test.png)
+
+Procedemos ahora a listar la base de datos en la que estamos 
+
+```
+union select 1,2,database(),4,5,6,7-- -
+```
+![Resultado de Nmap](IMG/bd.png)
