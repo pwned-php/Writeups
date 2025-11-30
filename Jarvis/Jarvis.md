@@ -155,7 +155,7 @@ Asi que la urlencodemos y entramos
 
 Si ejecutamos el comando sudo -l vemos que tenemos permisos para ejectar un script
 
-
+![Resultado de Nmap](IMG/script.png)
 
 
 
