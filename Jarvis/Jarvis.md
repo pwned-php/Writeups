@@ -151,6 +151,10 @@ Asi que la urlencodemos y entramos
 
 ![Resultado de Nmap](IMG/reverse2.png)
 
+# ESCALADA DE PRIVILEGIOS
+
+Si ejecutamos el comando sudo -l vemos que tenemos permisos para ejectar un script
+
 
 
 
