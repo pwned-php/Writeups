@@ -1,4 +1,4 @@
-# Writeup - Máquina Epsilon HTB
+# Writeup - Máquina Jravis HTB
 
 **Plataforma**: HackTheBox  
 **Dificultad**: Media  
