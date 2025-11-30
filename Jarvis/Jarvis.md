@@ -33,4 +33,6 @@ Vemos que tiene 7 columnas
 
 ![Resultado de Nmap](IMG/columnas.png)
 
+Vemos que tenemos control sobre la columna 3 asi que probamos a imprimir por pantalla "test"
 
+![Resultado de Nmap](IMG/test.png)
